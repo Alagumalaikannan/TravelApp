@@ -9,7 +9,7 @@
 </nav>
 <div class="welcome-content">
     <div class="welcome-body">
-        <img class="welcome-image" src='/assets/images/welcome-image.svg' alt="Travel Image">
+        <img class="welcome-image" src='./assets/images/welcome-image.svg' alt="Travel Image">
         <div class="welcome-text">
             <div class="header-line bold-Font">Life is short<br>and the world is wide!</div>
             <div class="description">Stay at the comfort of your homes and book a trip to travel after the post pandemic era.</div>
@@ -23,7 +23,7 @@
         <div class="city-weather">
             <div class="common-style" *ngFor="let cityWeather of citiesWeather.result" [ngClass]="{'city-1':cityWeather.city == 'Canberra', 'city-2':cityWeather.city == 'Tokyo', 'city-3':cityWeather.city == 'London', 'city-4':cityWeather.city == 'Dubai'}">
                 <div class="city-name bold-Font">{{cityWeather.city}}</div>
-                <img class="sunny-image bold-Font" src='/assets/images/icon-party-sunny.svg' alt="sunny Image">
+                <img class="sunny-image bold-Font" src='./assets/images/icon-party-sunny.svg' alt="sunny Image">
                 <div class="temp-deg">{{cityWeather.temp_Celsius}}&deg;</div>
             </div>
         </div>
@@ -41,7 +41,7 @@
     </div>
 </div>
 <div class="promo-content">
-    <img src="/assets/images/promo-image.png" alt="Promo Content" width="100%">
+    <img src="./assets/images/promo-image.png" alt="Promo Content" width="100%">
     <div class="promo-text">
         <div class="trip bold-Font">PLAN A TRIP</div>
         <div class="trip-text bold-Font">Make your vacation the most<br> memorable one</div>
