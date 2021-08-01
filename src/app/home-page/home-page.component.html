@@ -54,7 +54,7 @@
             <form [formGroup]="TravelForm" (ngSubmit)="onSubmit()">
                 <div class="form-group">
                     <label>Your Name</label><br>
-                    <input type="text" formControlName="yourName" [(ngModel)]="yourName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.yourName.errors }" />
+                    <input type="text" formControlName="yourName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.yourName.errors }" />
                     <div *ngIf="submitted && f.yourName.errors" class="invalid-feedback">
                         <div *ngIf="f.yourName.errors.required">Name is required</div>
                     </div>

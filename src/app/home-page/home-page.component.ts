@@ -18,8 +18,8 @@ export class HomePageComponent implements OnInit {
   remainingSeconds: any;
   totalSeconds: any;
   betweenDays: any;
-  citiesWeather: any[];
-  featureDestination: any[];
+  citiesWeather: any = [];
+  featureDestination: any = [];
   TravelForm: FormGroup;
   submitted = false;
   success: string = '';
