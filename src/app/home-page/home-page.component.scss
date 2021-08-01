@@ -1,0 +1,423 @@
+.header-content {
+    background: transparent linear-gradient(to right, #000, #133357);
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    font-size: 19px;
+    @media only screen and (max-width: 767px) {
+        font-size: 12px;
+    }
+    .offer-text,
+    .offer-time {
+        padding: 5px 0;
+    }
+}
+
+.navigation {
+    text-align: right;
+    padding: 30px 100px;
+    font-size: 20px;
+    @media only screen and (max-width: 1200px) {
+        padding: 30px 50px;
+        text-align: center;
+    }
+    @media only screen and (max-width: 767px) {
+        padding: 30px 0;
+        font-size: 12px;
+    }
+    a {
+        margin: 35px;
+        text-decoration: none;
+        color: #000000;
+        @media only screen and (max-width: 767px) {
+            margin: 15px;
+        }
+    }
+}
+
+.welcome-content {
+    margin-top: 5%;
+    @media only screen and (max-width: 1200px) {
+        text-align: center;
+    }
+    .welcome-image {
+        margin: auto;
+        overflow: auto;
+        @media only screen and (max-width: 767px) {
+            width: 300px;
+        }
+    }
+    .welcome-body {
+        display: flex;
+        margin: 0 0 0 10%;
+        @media only screen and (max-width: 1200px) {
+            display: block;
+            margin: 0 10%;
+        }
+        @media only screen and (max-width: 767px) {
+            margin: 0 5%;
+        }
+    }
+    .welcome-text {
+        margin: auto;
+        min-width: 40%;
+        max-width: 40%;
+        @media only screen and (max-width: 1200px) {
+            margin-top: 100px;
+            min-width: 100%;
+            max-width: 100%;
+        }
+        @media only screen and (max-width: 767px) {
+            margin-top: 50px;
+        }
+        .header-line {
+            font-size: 60px;
+            overflow: auto;
+            @media only screen and (max-width: 1200px) {
+                font-size: 55px;
+            }
+            @media only screen and (max-width: 767px) {
+                font-size: 30px;
+            }
+        }
+        .description {
+            font-size: 25px;
+            padding: 30px 0;
+            line-height: 1.5;
+            @media only screen and (max-width: 767px) {
+                font-size: 20px;
+            }
+        }
+        .plan-trip {
+            background: transparent linear-gradient(to right, #000, #133357);
+            color: #FFFFFF;
+            font-size: 18px;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 5px;
+            @media only screen and (max-width: 767px) {
+                font-size: 15px;
+                padding: 10px 20px;
+            }
+            &:focus {
+                outline: 0;
+            }
+        }
+    }
+}
+
+.weather-content {
+    margin-top: 5%;
+    @media only screen and (max-width: 1200px) {
+        margin-bottom: 10%;
+    }
+    @media only screen and (max-width: 767px) {
+        margin-top: 10%;
+    }
+    .weather-channel {
+        padding: 30px;
+        margin: 0 10%;
+        background: #133357;
+        color: #FFFFFF;
+        font-size: 25px;
+        @media only screen and (max-width: 767px) {
+            margin: 0 5%;
+            font-size: 20px;
+        }
+    }
+    .city-weather {
+        display: flex;
+        margin: 0 10%;
+        color: #FFFFFF;
+        @media only screen and (max-width: 1200px) {
+            display: block;
+            position: relative;
+        }
+        @media only screen and (max-width: 767px) {
+            margin: 0 5%;
+        }
+        .common-style {
+            width: 25%;
+            text-align: center;
+            padding: 30px;
+            font-size: 25px;
+            @media only screen and (max-width: 1200px) {
+                width: 40%;
+                padding: 5%;
+            }
+            @media only screen and (max-width: 767px) {
+                font-size: 15px;
+            }
+            .city-name {
+                padding: 20px;
+                @media only screen and (max-width: 767px) {
+                    padding: 10px;
+                }
+            }
+            .sunny-image {
+                @media only screen and (max-width: 767px) {
+                    width: 35px;
+                }
+            }
+            .temp-deg {
+                font-size: 100px;
+                padding: 20px;
+                @media only screen and (max-width: 1200px) {
+                    font-size: 75px;
+                }
+                @media only screen and (max-width: 767px) {
+                    font-size: 40px;
+                    padding: 10px;
+                }
+            }
+        }
+        .city-1 {
+            background: #0D7E88;
+        }
+        .city-2 {
+            background: #D09378;
+            @media only screen and (max-width: 1200px) {
+                position: absolute;
+                top: 0px;
+                right: 3px;
+            }
+        }
+        .city-3 {
+            background: #405B5D;
+        }
+        .city-4 {
+            background: #74A748;
+            @media only screen and (max-width: 1200px) {
+                position: absolute;
+                bottom: 0px;
+                right: 3px;
+            }
+        }
+    }
+}
+
+.destination-content {
+    margin: 3% 0 0 10%;
+    @media only screen and (max-width: 767px) {
+        margin: 3% 0 0 5%;
+    }
+    .destination-title {
+        font-size: 32px;
+        color: #133357;
+        padding-bottom: 40px;
+        @media only screen and (max-width: 767px) {
+            font-size: 20px;
+            color: #133357;
+            padding-bottom: 25px;
+        }
+    }
+    .destination {
+        display: flex;
+        overflow-y: auto;
+        .image-style {
+            width: 250px;
+            height: 280px;
+            border-radius: 10px 10px 10px 0;
+            margin-right: 30px;
+            @media only screen and (max-width: 767px) {
+                width: 125px;
+                height: 125px;
+                margin-right: 10px;
+            }
+        }
+        .feature-city {
+            font-size: 20px;
+            padding: 15px 0;
+            color: #808080;
+            @media only screen and (max-width: 767px) {
+                font-size: 12px;
+                padding: 10px 0;
+            }
+        }
+    }
+}
+
+.promo-content {
+    margin-top: 3%;
+    position: relative;
+    @media only screen and (max-width: 1200px) {
+        margin: 7% 0;
+    }
+    .promo-text {
+        position: absolute;
+        bottom: 130px;
+        left: 170px;
+        color: white;
+        @media only screen and (max-width: 1200px) {
+            bottom: 25px;
+            left: 50px;
+        }
+        @media only screen and (max-width: 767px) {
+            bottom: 15px;
+            left: 20px;
+        }
+        .trip {
+            font-size: 60px;
+            line-height: 1.5;
+            @media only screen and (max-width: 1200px) {
+                font-size: 40px;
+                line-height: 2;
+            }
+            @media only screen and (max-width: 767px) {
+                font-size: 18px;
+            }
+            &-text {
+                font-size: 40px;
+                line-height: 1.3;
+                @media only screen and (max-width: 1200px) {
+                    font-size: 30px;
+                }
+                @media only screen and (max-width: 767px) {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+.get-quote-body {
+    margin-top: 3%;
+    .quote-tile {
+        font-size: 40px;
+        color: #133357;
+        text-align: center;
+        padding-bottom: 70px;
+        @media only screen and (max-width: 767px) {
+            font-size: 15px;
+            padding-bottom: 30px;
+        }
+    }
+    .quote-form {
+        margin: 0 35%;
+        @media only screen and (max-width: 1200px) {
+            margin: 0 10%;
+        }
+        @media only screen and (max-width: 767px) {
+            margin: 0 5%;
+        }
+        label {
+            font-size: 18px;
+            color: #808080;
+            font-weight: bold;
+            @media only screen and (max-width: 767px) {
+                font-size: 12px;
+            }
+        }
+        input {
+            margin: 10px 0;
+            width: 100%;
+            border: 1px solid #808080;
+            padding: 15px 10px;
+            font-size: 20px;
+            border-radius: 5px;
+            @media only screen and (max-width: 767px) {
+                width: 95%;
+                padding: 10px 5px;
+                font-size: 12px;
+            }
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            margin: 10px 0;
+        }
+        .submit-panel {
+            text-align: center;
+            padding: 25px;
+            .sumbit {
+                background: transparent linear-gradient(to right, #000, #133357);
+                color: #FFFFFF;
+                padding: 10px 50px;
+                font-size: 20px;
+                border-radius: 5px;
+                border: none;
+            }
+        }
+        .success-msg {
+            font-size: 15px;
+            font-weight: bold;
+            width: 95%;
+            margin-top: 10px;
+            padding: 20px 15px;
+            border-bottom: 1px solid #D3D3D3;
+            background: #ccffcc;
+            color: #808080;
+            @media only screen and (max-width: 1200px) {
+                width: 100%;
+            }
+            @media only screen and (max-width: 767px) {
+                font-size: 10px;
+                width: 95%;
+                padding: 10px 5px;
+            }
+        }
+        .invalid-feedback {
+            padding-bottom: 15px;
+            color: #b32d00;
+            font-size: 15px;
+            font-weight: 600;
+            @media only screen and (max-width: 767px) {
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+.footer-content {
+    display: flex;
+    background: transparent linear-gradient(to right, #000, #133357);
+    color: #FFFFFF;
+    padding: 80px;
+    @media only screen and (max-width: 1200px) {
+        display: block;
+        padding: 40px;
+    }
+    @media only screen and (max-width:767px) {
+        padding: 35px;
+    }
+    .footer-sec1,
+    .footer-sec2,
+    .footer-sec3,
+    .footer-sec4 {
+        width: 22%;
+        font-size: 23px;
+        padding: 5px;
+        line-height: 2;
+        @media only screen and (max-width: 1200px) {
+            width: 100%;
+            padding: 20px;
+        }
+        @media only screen and (max-width: 767px) {
+            padding: 0 0 30px 0;
+            font-size: 20px;
+        }
+        .offices {
+            font-size: 28px;
+            padding-bottom: 23px;
+            @media only screen and (max-width: 767px) {
+                font-size: 25px;
+                padding-bottom: 20px;
+            }
+        }
+        .disclaimer {
+            line-height: 1.5;
+        }
+        a {
+            color: #ffffff;
+            text-decoration: auto;
+            border: none;
+        }
+    }
+    .footer-sec4 {
+        width: 35%;
+        @media only screen and (max-width: 1200px) {
+            width: 100%;
+        }
+    }
+}

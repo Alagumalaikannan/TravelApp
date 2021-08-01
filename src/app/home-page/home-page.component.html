@@ -1,0 +1,113 @@
+<div class="header-content">
+    <div class="offer-text">Book now to get exciting travel deals. Upto 40% off on credit card payements</div>
+    <div class="offer-time bold-Font">Offers ends in {{remainingDays}}d {{remainingHours}}h {{remainingMinutes}}m {{remainingSeconds}}s</div>
+</div>
+<nav class="navigation bold-Font">
+    <a routerLink="/" (click)="scrollToElement(weather)">WEATHER</a>&nbsp;&nbsp;
+    <a routerLink="/" (click)="scrollToElement(destinations)">DESTINATIONS</a>&nbsp;&nbsp;
+    <a routerLink="/" (click)="scrollToElement(getaquote)">GET A QUOTE</a>
+</nav>
+<div class="welcome-content">
+    <div class="welcome-body">
+        <img class="welcome-image" src='/assets/images/welcome-image.svg' alt="Travel Image">
+        <div class="welcome-text">
+            <div class="header-line bold-Font">Life is short<br>and the world is wide!</div>
+            <div class="description">Stay at the comfort of your homes and book a trip to travel after the post pandemic era.</div>
+            <div><button class="plan-trip bold-Font">PLAN A TRIP</button></div>
+        </div>
+    </div>
+</div>
+<div #weather>
+    <div class="weather-content">
+        <div class="weather-channel bold-Font">THE WEATHER CHANNEL</div>
+        <div class="city-weather">
+            <div class="common-style" *ngFor="let cityWeather of citiesWeather.result" [ngClass]="{'city-1':cityWeather.city == 'Canberra', 'city-2':cityWeather.city == 'Tokyo', 'city-3':cityWeather.city == 'London', 'city-4':cityWeather.city == 'Dubai'}">
+                <div class="city-name bold-Font">{{cityWeather.city}}</div>
+                <img class="sunny-image bold-Font" src='/assets/images/icon-party-sunny.svg' alt="sunny Image">
+                <div class="temp-deg">{{cityWeather.temp_Celsius}}&deg;</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div #destinations>
+    <div class="destination-content">
+        <div class="destination-title bold-Font">Featured Destinations</div>
+        <div class="destination">
+            <span *ngFor="let feature of featureDestination.result">
+            <img class="image-style" src='{{feature.imageUrl}}' alt="Featured Images">
+        <div class="feature-city">{{feature.city}}</div>
+      </span>
+        </div>
+    </div>
+</div>
+<div class="promo-content">
+    <img src="/assets/images/promo-image.png" alt="Promo Content" width="100%">
+    <div class="promo-text">
+        <div class="trip bold-Font">PLAN A TRIP</div>
+        <div class="trip-text bold-Font">Make your vacation the most<br> memorable one</div>
+    </div>
+</div>
+<div #getaquote>
+    <div class="get-quote-body">
+        <div class="quote-tile bold-Font">Travelling as a group? Get a Quote</div>
+        <div class="quote-form">
+            <form [formGroup]="TravelForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label>Your Name</label><br>
+                    <input type="text" formControlName="yourName" [(ngModel)]="yourName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.yourName.errors }" />
+                    <div *ngIf="submitted && f.yourName.errors" class="invalid-feedback">
+                        <div *ngIf="f.yourName.errors.required">Name is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Contact No</label>
+                    <input type="text" formControlName="contactNo" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.contactNo.errors }" />
+                    <div *ngIf="submitted && f.contactNo.errors" class="invalid-feedback">
+                        <div *ngIf="f.contactNo.errors.required">Conatct No is required</div>
+                        <div *ngIf="f.contactNo.errors.pattern">Invalid Contact No</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email is required</div>
+                        <div *ngIf="f.email.errors.email">Invalid Email</div>
+                    </div>
+                </div>
+                <div *ngIf="success != ''" class="success-msg">{{success}}</div>
+                <div class="form-group submit-panel">
+                    <button class="sumbit">SUBMIT</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="footer-content">
+    <div class="footer-sec1">
+        <div class="offices bold-Font">TripZone</div>
+        <div><a href="#">About</a></div>
+        <div><a href="#">Awards</a></div>
+        <div><a href="#">Contact Us</a></div>
+        <div><a href="#">Feedback</a></div>
+    </div>
+    <div class="footer-sec2">
+        <div class="offices bold-Font">Main Offices</div>
+        <div>The United States</div>
+        <div>India</div>
+        <div>Brazil</div>
+        <div>Canada</div>
+    </div>
+    <div class="footer-sec3">
+        <div class="offices bold-Font">Sub Offices</div>
+        <div>Australia</div>
+        <div>England</div>
+        <div>France</div>
+        <div>Germany</div>
+    </div>
+    <div class="footer-sec4">
+        <div class="offices bold-Font">Disclaimer</div>
+        <div class="disclaimer">This layout is created as a pa of Sirius UI Recruitments.<br> All the above content has no direct relation with Sirius business.
+        </div>
+    </div>
+</div>
